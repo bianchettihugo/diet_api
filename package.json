@@ -4,7 +4,11 @@
   "description": "Backend for diet app",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "tsx watch src/server.ts",
+    "knex": "node --no-warnings --loader tsx ./node_modules/knex/bin/cli.js",
+    "lint": "eslint src --ext .ts --fix",
+    "build": "tsup src --out-dir build",
+    "test": "vitest"
   },
   "keywords": [],
   "author": "",
@@ -22,6 +26,7 @@
     "vitest": "^0.34.6"
   },
   "dependencies": {
+    "@fastify/cookie": "^9.1.0",
     "dotenv": "^16.3.1",
     "fastify": "^4.24.1",
     "knex": "^3.0.1",
