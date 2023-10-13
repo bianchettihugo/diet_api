@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Backend for diet app",
   "main": "index.js",
+  "engines": {
+    "node": ">=18"
+  },
   "scripts": {
     "dev": "tsx watch src/server.ts",
     "knex": "node --no-warnings --loader tsx ./node_modules/knex/bin/cli.js",
